@@ -1,0 +1,454 @@
+/* deviceMockups.css */
+
+/* Add these new styles */
+.email-client-style {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.5;
+  color: #202124;
+}
+
+.email-body-content {
+  padding: 20px;
+}
+
+.email-body-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.email-header {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.email-subject {
+  font-size: 22px;
+  margin: 0 0 12px 0;
+  color: #202124;
+}
+
+.email-sender-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.sender-name {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.sender-email {
+  color: #5f6368;
+  font-size: 14px;
+}
+
+.email-time {
+  color: #5f6368;
+  font-size: 13px;
+  margin-left: auto;
+}
+
+.inbox-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  gap: 8px; /* Add consistent spacing */
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.inbox-content-wrapper {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.inbox-item.unread {
+  background-color: #f6f8fc;
+}
+
+.inbox-item:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.star-icon {
+  color: #5f6368;
+  margin-right: 15px;
+  min-width: 20px;
+}
+
+.inbox-sender {
+  font-weight: 600;
+  min-width: 120px;
+  margin-right: 15px;
+}
+
+.inbox-subject {
+  font-weight: 500;
+  margin-right: 15px;
+  flex-grow: 1;
+}
+
+.inbox-preview-text {
+  color: #5f6368;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0px;
+}
+
+.inbox-time-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.inbox-time {
+  color: #5f6368;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.unread-dot {
+  height: 8px;
+  width: 8px;
+  background-color: #1a73e8;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+/* Add these phone-specific overrides */
+.phone-screen .inbox-item {
+  padding: 6px 8px;
+  gap: 0px;
+}
+
+.phone-screen .inbox-sender {
+  min-width: 60px;
+  font-size: 10px;
+  margin-right: 0px;
+}
+
+.phone-screen .inbox-subject {
+  font-size: 12px !important;
+}
+ 
+.phone-screen .inbox-preview-text {
+  font-size: 11px !important;
+}
+
+.phone-screen .inbox-time {
+  font-size: 10px !important;
+}
+
+.phone-screen .star-icon {
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.phone-screen .inbox-content-wrapper {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.phone-screen .email-body-content{
+  padding: 0;
+}
+
+.phone-screen .email-subject{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.phone-screen .sender-name {
+  font-size: 12px !important;
+  white-space: nowrap;
+}
+
+.phone-screen .sender-email {
+  font-size: 10px;
+}
+
+.phone-screen .email-time {
+  font-size: 9px;
+}
+
+/* ============================ */
+
+/* Phone Mockup */
+.phone-mockup {
+  position: relative;
+  margin: 1rem auto;
+  background-color: #1f2937;
+  border: 14px solid #1f2937;
+  border-radius: 2.5rem;
+  height: 600px;
+  width: 300px;
+
+
+  image-rendering: crisp-edges;
+  transform-origin: center center;
+}
+
+.phone-mockup-side-button {
+  position: absolute;
+  background-color: #1f2937;
+  width: 3px;
+}
+
+.phone-mockup-side-button.left-1 {
+  left: -17px;
+  top: 72px;
+  height: 32px;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.phone-mockup-side-button.left-2 {
+  left: -17px;
+  top: 124px;
+  height: 46px;
+}
+
+.phone-mockup-side-button.left-3 {
+  left: -17px;
+  top: 178px;
+  height: 46px;
+}
+
+.phone-mockup-side-button.right {
+  right: -17px;
+  top: 142px;
+  height: 64px;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.phone-screen {
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 272px;
+  height: 572px;
+  background-color: white;
+  padding: 1rem;
+  overflow-y: auto;
+
+
+  transform: translateZ(0); 
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  backface-visibility: hidden;
+  
+}
+
+/* Laptop Mockup */
+.laptop-mockup {
+  margin: 2rem auto;
+  max-width: 512px;
+}
+
+.laptop-top {
+  background-color: #1f2937;
+  border: 8px solid #1f2937;
+  border-radius: 0.5rem 0.5rem 0 0;
+  height: 294px;
+}
+
+.laptop-screen {
+  background-color: white;
+  height: 278px;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.laptop-bottom {
+  background-color: #1f2937;
+  height: 21px;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.laptop-bottom::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 96px;
+  height: 8px;
+  background-color: #374151;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* Desktop Mockup */
+.desktop-mockup {
+  margin: 2rem auto;
+  max-width: 512px;
+}
+
+.desktop-top {
+  background-color: #1f2937;
+  border: 16px solid #1f2937;
+  border-radius: 0.5rem 0.5rem 0 0;
+  height: 294px;
+}
+
+.desktop-screen {
+  background-color: white;
+  height: 262px;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.desktop-bottom {
+  background-color: #1f2937;
+  height: 42px;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.device-content {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+/* ======================= */
+/* Add to deviceMockups.css */
+.phone-mockup,
+.laptop-mockup,
+.desktop-mockup {
+  flex-shrink: 0; /* Prevent shrinking in flex containers */
+  min-width: 300px; /* Phone mockup base width */
+}
+
+/* For larger mockups */
+.laptop-mockup { min-width: 512px; }
+.desktop-mockup { min-width: 512px; }
+
+/* Add to mailBodyEditor.css */
+.preview-container {
+  overflow: auto;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Ensure proper scrolling in popup */
+.popup-content {
+  overflow: visible;
+}
+
+
+/* =========== */
+
+
+/* Device Selector Styling */
+.device-selector-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* margin: 1.5rem 0; */
+  padding: 1rem;
+  background: #f7fafc;
+  border-radius: 8px;
+}
+
+.device-selector-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin: 0;
+}
+
+.device-selector {
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: white;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.2em;
+  appearance: none;
+  transition: all 0.2s ease;
+  color: #4a5568;
+  cursor: pointer;
+}
+
+.device-selector:hover {
+  border-color: #cbd5e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.device-selector:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Heading styling */
+.preview-heading {
+  font-size: 24px;
+  color: #2d3748;
+  font-weight: 700;
+  /* margin-bottom: 1rem; */
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+/* .preview-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #667eea;
+  border-radius: 2px;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .device-selector-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+  
+  .device-selector-label {
+    text-align: center;
+  }
+  
+  .device-selector {
+    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .preview-heading {
+    font-size: 20px;
+    /* margin-bottom: 1rem; */
+  }
+}
+
+@media (max-width: 480px) {
+  .preview-heading {
+    font-size: 18px;
+    padding-bottom: 0.25rem;
+  }
+  
+  .preview-heading::after {
+    width: 40px;
+    height: 2px;
+  }
+}

@@ -1,0 +1,424 @@
+/* newSendMailPage.css */
+
+/* Revised Premium Styling */
+.new-send-mail-page {
+  padding: 2rem 5%;
+  background: #f8f9ff;
+  min-height: 100vh;
+}
+
+.sendMail-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.sendMail-hub-card {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+  margin: 10px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  background: linear-gradient(145deg, #ffffff, #f8f9ff);
+  box-shadow: 0 4px 24px rgba(99, 102, 241, 0.08);
+}
+
+.sendMail-hub-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+.sendMail-hub-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.1) 50%);
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sendMail-hub-card:hover::before {
+  opacity: 1;
+}
+
+.sendMail-card-icon {
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.sendMail-analytics-icon,
+.sendMail-rocket-icon {
+  font-size: 2.5rem;
+  color: #6366f1;
+  transition: transform 0.3s ease;
+}
+
+.sendMail-hub-card:hover .sendMail-analytics-icon,
+.sendMail-hub-card:hover .sendMail-rocket-icon {
+  transform: scale(1.1);
+}
+
+.sendMail-hub-card h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2a2d36;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.sendMail-card-description {
+  color: #6b7280;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.sendMail-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+.sendMail-cta-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sendMail-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.sendMail-cta-btn:hover::after {
+  opacity: 1;
+}
+
+.sendMail-btn-arrow,
+.sendMail-btn-chart {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.sendMail-cta-btn:hover .sendMail-btn-arrow,
+.sendMail-cta-btn:hover .sendMail-btn-chart {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .sendMail-hub-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  
+  .sendMail-hub-card {
+    padding: 2rem;
+    margin: 10px 0;
+  }
+  
+  .sendMail-card-icon {
+    padding: 0.8rem;
+  }
+  
+  .sendMail-analytics-icon,
+  .sendMail-rocket-icon {
+    font-size: 2rem;
+  }
+}
+
+/* ========FolderAndRecipientSelection css======== */
+/* .folder-selection-container {
+  background: #ffffff;
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.selection-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.custom-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.back-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.next-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.next-btn:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 576px) {
+  
+  .folder-selection-container {
+    padding: 15px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+} */
+
+/* FolderAndRecipientSelection Styling */
+.fars-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 20px;
+  /* box-shadow: 0 15px 30px rgba(0,0,0,0.05); */
+
+
+  
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  background: linear-gradient(145deg, #ffffff, #f8f9ff);
+  box-shadow: 0 4px 24px rgba(99, 102, 241, 0.08);
+}
+
+.fars-title {
+  font-size: 2rem;
+  color: #2a2d36;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.fars-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 2px;
+}
+
+.fars-form-group {
+  margin-bottom: 2rem;
+}
+
+.fars-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.fars-label-icon {
+  font-size: 1.4rem;
+  display: inline-flex;
+}
+
+.fars-select,
+.fars-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 2px solid #e0e7ff;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: white;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236366f1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2em;
+}
+
+.fars-select:focus,
+.fars-input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.fars-select:hover,
+.fars-input:hover {
+  border-color: #a5b4fc;
+}
+
+.fars-input {
+  background-image: none;
+  padding: 1rem 1.5rem;
+}
+
+.fars-button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  gap: 1.5rem;
+}
+
+.fars-btn {
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.fars-back-btn {
+  background: #f0f2fd;
+  color: #6366f1;
+  border: 2px solid #e0e7ff;
+}
+
+.fars-back-btn:hover {
+  background: #e0e7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+}
+
+.fars-next-btn {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+.fars-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.fars-btn-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.fars-btn:hover .fars-btn-arrow{
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .fars-container {
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+  .fars-title {
+    font-size: 1.75rem;
+  }
+
+  .fars-button-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .fars-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

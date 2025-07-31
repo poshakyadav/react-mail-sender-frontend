@@ -1,0 +1,140 @@
+/* comman-style.css */
+
+.page-overview-title {
+  text-align: center;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  text-transform: uppercase;
+  /* letter-spacing: 1.5px; */
+  /* font-family: Arial, sans-serif; */
+
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2a2d36;
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 8%;
+  margin-right: 8%;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-data-message p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.no-data-message p::before {
+  content: "📭 ";
+  font-size: 24px;
+}
+
+
+/* Heading title and icons css */
+.dashboard-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.dashboard-icon {
+  color: #ffb02e;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #e74c3c15;
+  color: #e74c3c;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.delete-btn:hover {
+  background: #e74c3c25;
+}
+
+/* For Large Devices */
+@media screen and (max-width: 1408px) {
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+/* For Medium Devices */
+@media screen and (max-width: 768px) {
+  .page-overview-title {
+    font-size: 2.3rem;
+  }
+
+  .no-data-message {
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+    margin-left: 8%;
+    margin-right: 8%;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .no-data-message p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #34495e;
+  }
+
+  .no-data-message p::before {
+    content: "📭 ";
+    font-size: 21px;
+  }
+}
+
+/* For Small Devices, like -> Phones */
+@media screen and (max-width: 576px) {
+  .page-overview-title {
+    font-size: 1.75rem;
+  }
+
+  .no-data-message {
+    text-align: center;
+    padding: 8px;
+    margin-top: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .no-data-message p {
+    font-size: 13px;
+    font-weight: 500;
+    color: #34495e;
+  }
+
+  .no-data-message p::before {
+    content: "📭 ";
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .page-overview-title {
+    font-size: 1.5rem;
+  }
+}

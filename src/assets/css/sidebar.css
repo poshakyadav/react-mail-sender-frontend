@@ -1,0 +1,318 @@
+.sidebar {
+  height: 100vh;
+  background-color: none;
+  color: #000;
+  padding: 10px;
+  padding-top: 20px;
+  position: relative;
+  transition: width 0.3s;
+  z-index: 1000;
+  /* overflow: hidden; */
+  
+}
+
+.sidebar.closed {
+  width: 40px;
+  background-color: none;
+}
+
+
+.sidebar.open {
+  width: 230px;
+  background-color: #fff;
+  border-right: 1px solid #f5f5f5;
+}
+
+
+.control {
+  position: absolute;
+  top: 25px;
+  right: -14px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  z-index: 999; /* Ensure it's always on top */
+}
+
+.sidebar.open .control{
+  margin-right: 10px;
+}
+
+.sidebar.closed .control{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+.control #controlIconSvgId {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}
+
+.control.rotate #controlIconSvgId {
+  transform: rotate(180deg);
+}
+
+#controlIconId {
+  fill: #2c3e50;
+}
+
+#controlIconId:hover {
+  fill: #566573;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/*  */
+.logo.closed {
+  opacity: 0;
+  transform: translateX(-20px);
+
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+/*  */
+
+.logoImage {
+  width: 40px;
+  transition: transform 0.5s;
+}
+
+.logoName {
+  padding-top: 6px;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+
+  transition: opacity 0.3s ease; /* Add transition for text */
+}
+
+#logoIconId {
+  fill: rgb(45, 79, 250);
+}
+
+#logoIconId:hover {
+  fill: rgb(73, 94, 200);
+}
+
+.logo.closed h1 {
+  transform: scale(0);
+}
+
+.urlText {
+  white-space: nowrap;
+  /* transition: opacity 0.3s; */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 15px;
+  color: #566573;
+}
+
+.sidebarULItem {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebarListItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  color: #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+
+
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/*  */
+.closed .sidebarListItem {
+  opacity: 0;
+  transform: translateX(-20px);
+
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+/*  */
+
+
+/* .closed .sidebarListItem .urlText {
+  display: none;
+}
+
+.closed .sidebarListItem{
+  display: none;
+}
+
+.closed .logo{
+  display: none;
+} */
+
+
+.content {
+  flex: 1;
+  width: 100%;
+  padding: 20px;
+
+  overflow-y: auto; /* Allow content to scroll */
+  height: 100vh; /* Full height */
+
+  box-sizing: border-box;
+}
+
+.sidebarListItem:has(> .active) {
+  background-color: #e1e0e03a;
+}
+
+.active .sidebars-icon  {
+  color: #000 !important;
+}
+
+.active .urlText{
+  color: #000 !important
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    z-index: 1000;
+    height: 100vh;
+  }
+  .content {
+    position: relative;
+  }
+}
+
+
+/* Sidebar Icons Css */
+
+/* Folder Icon */
+#folderIconId:hover {
+  fill: #000;
+}
+
+/* Gear Icon */
+#gearIconId:hover {
+  fill: #000;
+}
+
+/* Dashboard Icon */
+#dashboardIconId:hover {
+  fill: #000;
+}
+
+/* Mail Icon */
+#mailIconId:hover {
+  fill: #000;
+}
+
+/* Template Icon */
+#templateIconId:hover {
+  fill: #000;
+}
+
+/* Logout Icon */
+#logoutIcon {
+  fill: rgb(241, 21, 21);
+}
+
+.logout-react-icon{
+  color: rgb(241, 21, 21);
+  font-size: 21px;
+}
+
+#logoutIcon:hover {
+  fill: red;
+}
+
+.logoutText{
+  white-space: nowrap;
+  /* transition: opacity 0.3s; */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 15px;
+}
+
+.sidebarLogoutItem {
+  display: inline-block;
+  transform: rotate(180deg);
+}
+
+/* History Campaign react icon */
+.campaign-react-icon{
+  font-size: 21px;
+  color: #566573;
+}
+
+.campaign-react-icon:hover{
+  color: #000;
+}
+
+/* Template react icon */
+.template-react-icon{
+  font-size: 21px;
+  color: #566573;
+}
+
+.template-react-icon:hover{
+  color: #000;
+}
+
+/* Create Campaign react icon */
+.create-campaign-react-icon{
+  font-size: 21px;
+  color: #566573;
+}
+
+.create-campaign-react-icon:hover{
+  color: #000;
+}
+
+/* Folder react icon */
+.folder-react-icon{
+  font-size: 21px;
+  color: #566573;
+}
+
+.folder-react-icon:hover{
+  color: #000;
+}
+
+/* Setting react icon */
+.setting-react-icon{
+  font-size: 21px;
+  color: #566573;
+}
+
+.setting-react-icon:hover{
+  color: #000;
+}
+
+/* Analytics react icon */
+.analytics-react-icon{
+  font-size: 21px;
+  color: #566573;
+}
+
+.analytics-react-icon:hover{
+  color: #000;
+}
+
+

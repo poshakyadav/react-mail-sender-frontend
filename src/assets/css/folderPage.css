@@ -1,0 +1,465 @@
+/* folderPage.css */
+
+/* Container and header styling */
+.folder-page {
+  /* max-width: 1200px; */
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.folder-page h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Create folder input and button */
+.create-folder {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  /* margin-left: 5%;
+  margin-right: 5%; */
+}
+
+.folder-text-input {
+  width: 100%;
+}
+
+.create-folder input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.create-folder button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-folder button:hover {
+  background-color: #34495e;
+}
+
+/* Folder container styling */
+.folders {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.folder {
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #fff;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.036); */
+}
+
+/* Folder header with toggle icon and add button */
+.folder-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 8px;
+}
+
+.folder-toggle {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #2c3e50;
+}
+
+.folder-name {
+  flex-grow: 1;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  font-family: Arial, sans-serif;
+}
+
+.add-list-button {
+  background-color: #2ecc71;
+  border: none;
+  color: white;
+  /* font-size: 18px; */
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button-icon {
+  position: relative;
+  font-weight: 900;
+  font-size: 25px;
+  bottom: 10.6px;
+}
+
+.add-list-button:hover {
+  background-color: #27ae60;
+}
+
+/* Folder contents and new list input */
+.folder-contents {
+  margin-top: 10px;
+  padding-left: 30px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.new-list-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.new-list-input input {
+  flex: 1;
+  padding: 6px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.new-list-input button {
+  padding: 6px 12px;
+  font-size: 16px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.new-list-input button:hover {
+  background-color: #34495e;
+}
+
+/* Recipient lists styling */
+.recipient-lists {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recipient-list-item {
+  padding: 8px;
+  font-size: 16px;
+  color: #2c3e50;
+  cursor: pointer;
+  border-top: 1px solid #e2e2e2;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.recipient-list-item:hover {
+  background-color: #eaf2f859;
+}
+
+.no-lists {
+  padding: 8px;
+  font-size: 16px;
+  color: #888;
+}
+
+/* ======== Delete Feature Buttons Css ======== */
+/* Delete button common styles */
+.delete-folder-button {
+  background: #e74c3c15;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  border: none;
+  cursor: pointer;
+  color: #e74c3c; /* red color indicating delete action */
+  font-size: 18px;
+  margin-left: 10px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effects for delete buttons */
+.delete-folder-button:hover,
+.delete-recipient-list-button:hover {
+  background: #e74c3c25;
+  /* transform: scale(1.1); */
+}
+
+/* Optional: Focus styles for accessibility */
+.delete-folder-button:focus,
+.delete-recipient-list-button:focus {
+  outline: none;
+  box-shadow: 0 0 3px #c0392b;
+}
+
+/* Recipient list item styled as flex container */
+.recipient-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  /* padding-right: 0; */
+  font-size: 16px;
+  color: #2c3e50;
+  cursor: pointer;
+  border-top: 1px solid #e2e2e2;
+  transition: background-color 0.3s ease;
+}
+
+/* Ensure the list text takes up remaining space */
+.recipient-list-item span {
+  flex: 1;
+}
+
+/* Delete button for recipient list (aligned right by flex) */
+.delete-recipient-list-button {
+  background: #e74c3c15;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  cursor: pointer;
+  color: #e74c3c; /* red color indicating delete action */
+  font-size: 18px;
+  margin-left: 8px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* ========Confirmation popup overlay======== */
+.confirmation-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup container */
+.confirmation-popup {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+/* Popup message */
+.confirmation-popup p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Buttons container */
+.confirmation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Confirm button style */
+.folder-page-confirm-button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.folder-page-confirm-button:hover {
+  background: #c0392b;
+}
+
+/* Cancel button style */
+.folder-page-cancel-button {
+  background: #ccc;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.folder-page-cancel-button:hover {
+  background: #b3b3b3;
+}
+
+/* Fade in animation for folder contents */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* For Large Devices */
+@media screen and (min-width: 1408px) {
+  /* ========Folder Css======== */
+
+  .folders {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .create-folder {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* ========Folder Css======== */
+  .folders {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .create-folder {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+
+/* For Medium Devices */
+@media screen and (min-width: 768px) {
+  /* ========Folder Css======== */
+  .folders {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .create-folder {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+/* For Small Devices, like -> Phones */
+@media screen and (min-width: 576px) {
+  /* ========Folder Css======== */
+  .folders {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .create-folder {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .folder-toggle {
+    font-size: 15px;
+    margin-right: 10px;
+    color: #2c3e50;
+  }
+
+  .folder-name {
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  .add-list-button {
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    /* font-size: 18px; */
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .add-button-icon {
+    position: relative;
+    font-weight: 900;
+    font-size: 25px;
+    bottom: 10.6px;
+  }
+
+  .recipient-list-item {
+    padding: 8px;
+    font-size: 13px;
+    color: #2c3e50;
+    cursor: pointer;
+    border-top: 1px solid #e2e2e2;
+    transition: background-color 0.3s ease;
+  }
+
+  .create-folder input {
+    font-size: 13px;
+  }
+
+  .create-folder button {
+    font-size: 13px;
+  }
+
+  .new-list-input input {
+    flex: 1;
+    padding: 6px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+
+  .new-list-input button {
+    padding: 6px 12px;
+    font-size: 13px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  /* ====Delete Feature Buttons css ==== */
+  .delete-folder-button,
+  .delete-recipient-list-button {
+    font-size: 16px;
+    padding: 3px;
+  }
+
+  .delete-recipient-list-button {
+    font-size: 16px;
+    padding: 3px;
+  }
+
+  .recipient-list-item {
+    font-size: 13px;
+  }
+}
